@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>{{title}}></title>
+  <head>
+    <title>{{title}}></title>
 
-		<!-- Viewport mobile tag for sensible mobile support -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		
-		<!-- JavaScript and stylesheets from your assets folder are included here -->
-		{{assets 'css'}}
-		{{assets 'js'}}
-	</head>
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<body>
-		{{{body}}}
+    <!-- Beefed-up socket.io client -->
+    <script type="text/javascript" src="/mixins/sails.io.js"></script>
+  </head>
 
-		<!-- Templates from your view path are included here -->
-		{{assets 'tpl'}}
-	</body>
+  <body>
+    {{{body}}}
+  </body>
 </html>

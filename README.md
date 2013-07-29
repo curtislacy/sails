@@ -5,6 +5,7 @@
 Sails.js makes it easy to build custom, enterprise-grade Node.js apps. It is designed to resemble the MVC architecture from frameworks like Ruby on Rails, but with support for the more modern, data-oriented style of web app development.  It's especially good for building realtime features like chat.
 
 # Intro to Sails.js
+<a href="http://net.tutsplus.com/tutorials/javascript-ajax/working-with-data-in-sails-js/">Nettuts+ Working With Data in Sails.js</a>  
 [![ScreenShot](http://balderdashy.github.com/sails/images/screenshot.png)](http://youtu.be/GK-tFvpIR7c)
 
 # Installation
@@ -36,6 +37,7 @@ The default port for Sails is 1337.  At this point if you visit <a href="http://
 
 Now, let's get Sails to do cool stuff.
 
+Aditionally you can check out [generator-sails](https://github.com/colinwren/generator-sails) for [Yeoman](https://github.com/yeoman/yeoman). Note that this is still a WIP, not everything is expected to work yet.
 # Hello, Sails!
 
 To get Sails to say "Hello World!", you need only to change the view for the default home page in `views/home/index.ejs`.  But that doesn't really teach us a whole lot-- instead, let's create a new controller and have IT tell us hello.
@@ -52,8 +54,8 @@ Now let's edit that action to send back the string `'Hello World!'`.
 
 var HelloController = {
 
-	index: function(req, res) {
-		res.send('Hello World!');
+    index: function(req, res) {
+  	res.send('Hello World!');
 	}
 }
 
@@ -106,7 +108,7 @@ sails generate user
 If you check out your app, you'll notice that this created a file at **/api/models/User.js** and **/api/controllers/UserController.js**.  
 
 
-Sails API blueprints are more than scaffolds. Generating HTML don't really make sense for 
+Sails API blueprints are more than scaffolds. Generating HTML doesn't really make sense for 
 modern web apps. Instead, Sails automatically builds a RESTful JSON API for your models.
 Most importantly, this API supports HTTP _and_ WebSockets. By default for every model and controller you generate, you get the basic CRUD operations automatically.  
 If you need more fine-grained control, you can just override the appropriate method in the controller.  (see the documentation for more information on how to do this)  Controllers are just Express middleware, the most popular framework for writing code in Node.js.  And most importantly, all of that code, even the custom controller, still supports WebSocekts out of the box.
@@ -162,7 +164,7 @@ Join us on IRC at #sailsjs on freenode
 
 Version, Dependencies and Compatibility
 --
-#### Latest stable release: `v0.8.9`
+#### Latest stable release: `v0.9.3`
 
 Tested with node v0.8.22 and v0.10.x
 Sails is built on the rock-solid foundations of ExpressJS and Socket.io.  
